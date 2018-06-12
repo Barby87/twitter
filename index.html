@@ -6,7 +6,7 @@
 	<title>Twitter</title>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="assets/css/grid.css">
-	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
 <!-- Sección header -->
@@ -28,8 +28,14 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
-					<textarea class="txt" id="comment" placeholder="Añade un comentario..."></textarea>
-				</div>
+          <div class="col-12">
+            <!--asignando un máximo de 140 caracteres-->
+            <textarea class="txt" onKeyDown="contar()" onKeyUp="contar()" maxlength="140" id="comment" placeholder="Añade un comentario..."></textarea>
+            </br>
+            <label>Caracteres restantes:</label> 
+            <input disabled size="3" value="140" id="contador"> 
+                  </div>
+        </div>
 			</div>
 			<div class="row">
 				<div class="col-12">
